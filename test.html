@@ -11,15 +11,15 @@
     <body>
         <!-- the content goes here -->
         <script type="text/javascript">
-        	function getUrlParam(parameter, defaultvalue){
-			    var urlparameter = defaultvalue;
-			    if(window.location.href.indexOf(parameter) > -1){
-			        urlparameter = getUrlVars()[parameter];
-			        }
-			    return urlparameter;
+        	function getUrlVars() {
+			    var vars = {};
+			    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			        vars[key] = value;
+			    });
+			    return vars;
 			}
-			var number = getUrlVars()["x", "EMPTY"];
-			var mytext = getUrlVars()["y", "EMPTY"];
+			var number = getUrlVars()["x"];
+			var mytext = getUrlVars()["y"];
         	//var link = window.location.href;
         	var link = "findme.com/?" + number + "#" + mytext;
         	alert(link);
