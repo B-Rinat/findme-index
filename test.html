@@ -20,13 +20,12 @@
 			}
 			var number = getUrlVars()["x"];
 			var mytext = getUrlVars()["y"];
-        	var mystring = "";//"/" + number + "/" + mytext;
+        	var mystring = "/" + number + "/" + mytext;
         	//alert(mystring);
         	var link = "findme";
-        	window.location.href = "application://findme.com/?" + number + "/" + mytext + "#Intent;scheme=application;package=production.app.rina.findme;S.myextra=mystring;end"
         </script>
-        <a href="">
-        just open your Activity, without a choosing dialog+++++++++++ </a>
+        <a href="application://findme.com#Intent;scheme=application;package=production.app.rina.findme;S.myextra=mystring;end">
+        just open your Activity, without a choosing dialog----- </a>
     </body>
 </html>
 
