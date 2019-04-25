@@ -22,7 +22,11 @@
 			var mytext = getUrlVars()["y"];
         	var mystring = number + "#" + mytext;
         	alert(mystring);
+        	var link = "findme.com";
         </script>
-        <a href="intent:#Intent;package=production.app.rina.findme;S.myextra=mystring; end">O$$$pen your Activity directly (just open your Activity, without a choosing dialog). </a>
+        <a href="intent://link#Intent;scheme=https;package=production.app.rina.findme;S.myextra=mystring; end">
+        just open your Activity, without a choosing dialog). </a>
     </body>
 </html>
+
+<!--a href="intent://findme.com/#Intent;scheme=https;package=production.app.rina.findme;S.myextra=mystring; end"-->
